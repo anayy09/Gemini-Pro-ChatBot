@@ -38,7 +38,7 @@ for message in st.session_state.chat_session.history:
         st.markdown(message["parts"][0]["text"])
 
 # Input field for user's message
-user_prompt = st.chat_input("Ask Gemini-Pro...")
+user_prompt = st.chat_input("Ask me anything!")
 if user_prompt:
     # Add user's message to chat and display it
     st.chat_message("user").markdown(user_prompt)
@@ -50,16 +50,6 @@ if user_prompt:
 
 # Sidebar for additional features and settings
 sidebar = st.sidebar
-
-# # Example of a selection box
-# dummy_select = sidebar.selectbox("Choose a dummy option:", [
-#                                  "Option 1", "Option 2", "Option 3"])
-# # Example of a slider
-# dummy_slider = sidebar.slider(
-#     "Dummy Slider", min_value=0, max_value=100, value=50)
-# # Placeholder button for future functionality
-# if sidebar.button("Dummy Button"):
-#     st.sidebar.write("Dummy button clicked!")
 
 # Reset Chat Button
 if sidebar.button("Reset Chat"):
